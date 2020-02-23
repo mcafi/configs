@@ -1,0 +1,31 @@
+background_opacity: 0.75
+window:
+        padding:
+                x: 4
+                y: 2
+font:
+        normal:
+                family: Fira Code
+        size: 11.5
+colors:
+        primary:
+                background: '#101020'
+                foreground: '#e6e6ff'
+        normal:
+                black: '#000007'
+                red: '#bc5664'
+                green: '#a1ad77'
+                yellow: '#cc9e5a'
+                blue: '#6494a8'
+                magenta: '#dd9caf'
+                cyan: '#95bdb1'
+                white: '#d5d5df'
+        bright: 
+                black: '#20202a'
+                red: '#dc7684'
+                green: '#c1cd97'
+                yellow: '#ecbe7a'
+                blue: '#84b4c8'
+                magenta: '#fdbccf'
+                cyan: '#b5ddd1'
+                white: '#f5f5ff'
