@@ -29,7 +29,7 @@ alert = #bd2c40
 
 [bar/top]
 width = 100%
-height = 24
+height = 30
 
 ;offset-x = 1%
 ;offset-y = 1%
@@ -52,10 +52,11 @@ module-margin-left = 2
 module-margin-right = 2
 
 separator = 
+separator-foreground = #aaa
 
-font-0 = "Fira Sans:size=11:style=Medium;2"
-font-1 = "Fira Code:size=11:style=Bold;2"
-font-2 = "FiraCode Nerd Font:style=Regular:size=12:scale=10;1"
+font-0 = "Fira Sans:size=12:style=Medium;2"
+font-1 = "Fira Code:size=12:style=Bold;2"
+font-2 = "FiraCode Nerd Font:style=Regular:size=13:scale=10;1"
 
 modules-left = i3 xwindow
 modules-center = date
@@ -174,11 +175,6 @@ labrl-urgent-font = 2
 ; Separator in between workspaces
 ; label-separator = |
 
-[module/title]
-type = internal/xwindow
-format = <label>
-label = %title%
-
 [module/mpd]
 type = internal/mpd
 format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
@@ -256,13 +252,9 @@ type = internal/date
 interval = 5
 
 date =
-date-alt = " %d-%M-%y"
 
 time = %H:%M
-time-alt = %H:%M:%S
 
-format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
 label = %date% %time%
@@ -299,10 +291,10 @@ full-at = 98
 time-format = %H:%M
 
 format-charging = <animation-charging>  <label-charging>
-label-charging = "%percentage%%"
+label-charging = "%percentage%% "
 
 format-discharging = <ramp-capacity> <label-discharging>
-label-discharging = "%percentage%% (%time%)"
+label-discharging = " %percentage%% (%time%)"
 
 format-full = "<label-full>"
 label-full = " carica"
@@ -359,29 +351,22 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
-label-open-foreground = #822
+label-open = esci
 label-close = chiudi
-label-separator = |
+label-separator = " | "
 
-menu-0-0 = ﰇ 
-menu-0-0-foreground = #bb2
-menu-0-0-exec = menu-open-1
-menu-0-1 = 
-menu-0-1-foreground = #822
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = indietro
-menu-1-0-exec = menu-open-0
-menu-1-1 = ﰇ 
-menu-1-1-foreground = #bb2
-menu-1-1-exec = sstemctl reboot
-
-menu-2-0 = 
-menu-2-0-exec = systemctl poweroff
-menu-2-0-foreground = #822
-menu-2-1 = indietro
-menu-2-1-exec = menu-open-0
+menu-0-0 = 
+menu-0-0-foreground = #39c
+menu-0-0-exec = i3-msg exit
+menu-0-1 = 
+menu-0-1-foreground = #3c3
+menu-0-1-exec = systemctl suspend
+menu-0-2 = ﰇ
+menu-0-2-foreground = #cc3
+menu-0-2-exec = systemctl restart
+menu-0-3 = 
+menu-0-3-foreground = #c33
+menu-0-3-exec = systemctl poweroff
 
 [settings]
 screenchange-reload = true
